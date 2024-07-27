@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-sidebar {
+  width: 300px; /* Adjust width as needed */
+}
+
+.custom-link {
+  margin-bottom: 10px; /* Space out the links for better readability */
+}
+
+.custom-logo {
+  max-width: 100%;
+  height: auto;
+}
