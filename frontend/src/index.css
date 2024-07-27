@@ -12,15 +12,35 @@ code {
     monospace;
 }
 
-.custom-sidebar {
-  width: 300px; /* Adjust width as needed */
-}
-
-.custom-link {
-  margin-bottom: 10px; /* Space out the links for better readability */
+.custom-navbar {
+  background-color: #F7EAD5;
 }
 
 .custom-logo {
-  max-width: 100%;
-  height: auto;
+  width: 100px; /* Adjust size as needed */
+  cursor: pointer;
+}
+
+.custom-sidebar {
+  background-color: #F7EAD5;
+}
+
+.custom-link {
+  color: white;
+}
+
+@media (max-width: 767px) {
+  .custom-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .custom-logo {
+    width: 50px; /* Adjust size for mobile as needed */
+  }
+
+  .navbar-toggler {
+    margin-left: auto;
+  }
 }
