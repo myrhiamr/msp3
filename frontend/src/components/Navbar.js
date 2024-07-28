@@ -2,29 +2,28 @@ import React from 'react';
 import { Container, Row, Col, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Routes, Route } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import logo from '../assets/logo.jpeg';
 import '../index.css';
 import Home from './Home';
-import Products from './Products';
-import About from './About';
-import Login from './Login';
+import Products from '../pages/Products';
+import ContactUs from './ContactUs';
+import Login from '../pages/Login';
 import Creator1 from './Creator1';
 import Creator2 from './Creator2';
 
-
 const navLinks = [
-    { path: '/', label: 'Home' },
-    { path: '/products', label: 'Products' },
-    { path: '/about', label: 'About' },
-    { path: '/login', label: 'Login' },
-  ];
+  { path: '/', label: 'Home' },
+  { path: '/products', label: 'Products' },
+  { path: '/contactus', label: 'Contact Us' },
+  { path: '/login', label: 'Login' },
+];
 
 const MyNavbar = () => {
   return (
     <Container fluid>
       <Row>
-        <Col md={3} className="d-none d-md-flex flex-column vh-100 custom-sidebar" style={{ backgroundColor: '#F7EAD5' }}>
-          <Container className="p-3">
+        <Col md={3} className="d-none d-md-flex flex-column vh-100 custom-sidebar" style={{ backgroundColor: '#F6f1e8' }}>
+          <Container>
             <LinkContainer to="/">
               <Image src={logo} className="custom-logo" />
             </LinkContainer>
@@ -49,7 +48,7 @@ const MyNavbar = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
-            <Route path="/about" element={<About />} />
+            <Route path="/contactus" element={<ContactUs />} />
             <Route path="/login" element={<Login />} />
             <Route path="/creators/creator1" element={<Creator1 />} />
             <Route path="/creators/creator2" element={<Creator2 />} />
@@ -86,8 +85,5 @@ const MyNavbar = () => {
     </Container>
   );
 };
-
-
-
 
 export default MyNavbar;

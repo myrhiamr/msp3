@@ -44,3 +44,46 @@ code {
     margin-left: auto;
   }
 }
+
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height */
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.home-img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.my-5 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+h3 {
+  color: #62b86d; /* Adjust color to match the design */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+strong {
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 1rem;
+}
