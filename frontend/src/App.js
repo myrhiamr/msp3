@@ -1,13 +1,14 @@
+// src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import MyNavbar from './components/Navbar';
 import Home from './components/Home';
-import Products from './pages/Products';
-import ProductDetail from './pages/ProductDetail';
+import SellCard from './components/sellCard';
 import ContactUs from './components/ContactUs';
-import Login from './pages/Login';
-import Creator1 from './components/Creator1';
-import Creator2 from './components/Creator2';
+import Login from './components/Login';
+import Poetone from './components/Poetone';
+import Poettwo from './components/Poettwo'
+import PoetryList from './components/PoetryList';
 
 function App() {
   return (
@@ -15,12 +16,12 @@ function App() {
       <MyNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/products/:id" element={<ProductDetail />} />
+        <Route path="/postcardsforsale" element={<SellCard />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/creators/creator1" element={<Creator1 />} />
-        <Route path="/creators/creator2" element={<Creator2 />} />
+        <Route path="/poets/poet1" element={<Poetone/>} />
+        <Route path="/poets/poet2" element={<Poettwo />} />
+        <Route path="/test" element={<PoetryList />} />
       </Routes>
     </Router>
   );

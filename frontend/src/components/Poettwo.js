@@ -1,12 +1,12 @@
 import React from 'react';
 import '../index.css'; // Import the CSS file for styling
 
-const Creator1 = () => {
+const Poettwo = () => {
   return (
     <div className="about-container">
       <div className="about-content">
         <div className="text-content">
-          <h1>Creator 1</h1>
+          <h1>Creator 2</h1>
           <p>
             Welcome to the "About Me" page of Creator 1. This page provides insight into the background, 
             inspirations, and works of our talented poet. Creator 1 has been crafting beautiful poetry 
@@ -18,11 +18,11 @@ const Creator1 = () => {
           </p>
         </div>
         <div className="image-content">
-          <img src="../assets/ana.jpeg" alt="Creator 1" />
+          <img src='"..assets/pablo.jpg"' alt="Poet 2" />
         </div>
       </div>
     </div>
   );
 };
 
-export default Creator1;
+export default Poettwo;

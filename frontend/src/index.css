@@ -208,3 +208,101 @@ p {
     justify-content: center;
   }
 }
+
+
+/* src/index.css */
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 16px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+}
+
+.product-info {
+  padding: 16px;
+}
+
+.product-name {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.product-price {
+  font-size: 1.2em;
+  color: #555;
+  margin: 8px 0;
+}
+
+.add-to-cart-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart-button:hover {
+  background-color: #0056b3;
+}
+
+/* src/styles/Login.css */
+
+.login-container {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Subtle gradient background */
+  padding: 0;
+}
+
+.login-card {
+  background: #fff; /* White background for the card */
+  padding: 2rem;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  text-align: center;
+}
+
+.login-title {
+  font-size: 2rem; /* Bold typography */
+  margin-bottom: 1.5rem;
+}
+
+.login-input {
+  border-radius: 8px; /* Rounded corners for input fields */
+  margin-bottom: 1rem;
+  border: 1px solid #ddd; /* Light border */
+}
+
+.login-button {
+  border-radius: 8px; /* Rounded corners for button */
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background: #007bff; /* Primary button color */
+  border: none;
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.login-button:hover {
+  background: #0056b3; /* Darker shade on hover */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+@media (max-width: 768px) {
+  .login-card {
+    width: 90%; /* Responsive width on small screens */
+  }
+}

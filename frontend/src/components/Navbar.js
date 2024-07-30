@@ -1,15 +1,16 @@
 import React from 'react';
-import { Container, Row, Col, Nav, Navbar, NavDropdown, Image } from 'react-bootstrap';
+import { Container, Row, Col, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Routes, Route } from 'react-router-dom';
 import logo from '../assets/logo.jpeg';
 import '../index.css';
 import Home from './Home';
-import Products from '../pages/Products';
+import PoetryList from './sellCard';
 import ContactUs from './ContactUs';
-import Login from '../pages/Login';
-import Creator1 from './Creator1';
-import Creator2 from './Creator2';
+import Login from './Login';
+import Poetone from './Poetone';
+import Poettwo from './Poettwo';
+
 
 const navLinks = [
   { path: '/', label: 'Home' },
@@ -35,11 +36,11 @@ const MyNavbar = () => {
               </LinkContainer>
             ))}
             <NavDropdown title="Poets" id="basic-nav-dropdown" menuVariant="dark">
-              <LinkContainer to="/creators/creator1">
-                <NavDropdown.Item>Creator 1</NavDropdown.Item>
+              <LinkContainer to="/poets/poet1">
+                <NavDropdown.Item>Poet 1</NavDropdown.Item>
               </LinkContainer>
-              <LinkContainer to="/creators/creator2">
-                <NavDropdown.Item>Creator 2</NavDropdown.Item>
+              <LinkContainer to="/poets/poet2">
+                <NavDropdown.Item>Poet 2</NavDropdown.Item>
               </LinkContainer>
             </NavDropdown>
           </Nav>
@@ -47,41 +48,14 @@ const MyNavbar = () => {
         <Col md={9} className="p-4">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/products" element={<Products />} />
+            <Route path="/products" element={<PoetryList />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/creators/creator1" element={<Creator1 />} />
-            <Route path="/creators/creator2" element={<Creator2 />} />
+            <Route path="/poets/poet1" element={<Poetone />} />
+            <Route path="/poets/poet2" element={<Poettwo/>} />
           </Routes>
         </Col>
       </Row>
-      <Navbar expand="md" className="custom-navbar d-md-none" style={{ backgroundColor: '#F7EAD5' }}>
-        <Container>
-          <LinkContainer to="/">
-            <Navbar.Brand>
-              <Image src={logo} className="custom-logo" />
-            </Navbar.Brand>
-          </LinkContainer>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              {navLinks.map((link) => (
-                <LinkContainer key={link.path} to={link.path} className="custom-link">
-                  <Nav.Link>{link.label}</Nav.Link>
-                </LinkContainer>
-              ))}
-              <NavDropdown title="Poets" id="basic-nav-dropdown" menuVariant="dark">
-                <LinkContainer to="/creators/creator1">
-                  <NavDropdown.Item>Creator 1</NavDropdown.Item>
-                </LinkContainer>
-                <LinkContainer to="/creators/creator2">
-                  <NavDropdown.Item>Creator 2</NavDropdown.Item>
-                </LinkContainer>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
     </Container>
   );
 };
