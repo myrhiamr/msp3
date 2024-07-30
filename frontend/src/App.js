@@ -1,27 +1,25 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Sidenavbar from './components/Navbar';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
-import SellCard from './components/sellCard';
+import Shop from './components/Shop';
 import ContactUs from './components/ContactUs';
 import Login from './components/Login';
-import Poetone from './components/Poetone';
-import Poettwo from './components/Poettwo'
-import PoetryList from './components/PoetryList';
+import SignIn from './components/Signin'; // Add this import
+import './index.css'; // Ensure you have a CSS file for global styles
+
 
 function App() {
   return (
     <Router>
-      <Sidenavbar />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/postcardsforsale" element={<SellCard />} />
+        <Route path="/shop" element={<Shop />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/poets/poet1" element={<Poetone/>} />
-        <Route path="/poets/poet2" element={<Poettwo />} />
-        <Route path="/test" element={<PoetryList />} />
+        <Route path="/signin" element={<SignIn />} />
       </Routes>
     </Router>
   );
