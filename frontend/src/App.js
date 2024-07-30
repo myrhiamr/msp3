@@ -1,7 +1,7 @@
 // src/App.js
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import MyNavbar from './components/Navbar';
+import Sidenavbar from './components/Navbar';
 import Home from './components/Home';
 import SellCard from './components/sellCard';
 import ContactUs from './components/ContactUs';
@@ -13,7 +13,7 @@ import PoetryList from './components/PoetryList';
 function App() {
   return (
     <Router>
-      <MyNavbar />
+      <Sidenavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/postcardsforsale" element={<SellCard />} />

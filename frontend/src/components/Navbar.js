@@ -2,6 +2,8 @@ import React from 'react';
 import { Container, Row, Col, Nav, NavDropdown, Image } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom'; 
+import { FaShoppingCart } from 'react-icons/fa';
 import logo from '../assets/logo.jpeg';
 import '../index.css';
 import Home from './Home';
@@ -44,6 +46,11 @@ const MyNavbar = () => {
               </LinkContainer>
             </NavDropdown>
           </Nav>
+          <Nav>
+          <Nav.Link as={Link} to="/cart">
+            <FaShoppingCart size={24} />
+          </Nav.Link>
+        </Nav>
         </Col>
         <Col md={9} className="p-4">
           <Routes>
