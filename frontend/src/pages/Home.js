@@ -7,7 +7,7 @@ import '../index.css';
 const Home = () => {
   return (
     <div className="home-container">
-    <Link to="/postcardsforsale">
+    <Link to="/poems">
         <img src={homeImg} alt="Home" className="home-img" />
     </Link>
 </div>

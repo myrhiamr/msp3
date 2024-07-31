@@ -190,8 +190,6 @@ strong {
   margin-left: 5px;
 }
 
-/* src/components/Home.css */
-
 .home-container {
   background-image: url('./assets/homeimg.png'); /* Make sure the path is correct */
   background-size: cover;
