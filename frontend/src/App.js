@@ -6,7 +6,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
-import Poems from './pages/Poem';
+import Products from './pages/Product';
 import Cart from './pages/Cart';
 
 const FlashMessage = () => {
@@ -48,7 +48,7 @@ function AppContent() {
             <Route path="/login" element={<PublicOnlyRoute><Login /></PublicOnlyRoute>} />
             <Route path="/register" element={<PublicOnlyRoute><Register /></PublicOnlyRoute>} />
             <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-            <Route path="/poems" element={<Poems />} />
+            <Route path="/products" element={<Products />} />
             <Route path="/cart" element={<ProtectedRoute><Cart /></ProtectedRoute>} />
           </Routes>
         </div>

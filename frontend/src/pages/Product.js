@@ -2,14 +2,14 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 
-const Poem = () => {
+const Products = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
-      console.log('📚 Fetching products...');
+      console.log('Fetching products...');
       try {
-        const res = await axios.get(`${process.env.REACT_APP_API_URL}/products`);
+        const res = await axios.get(`http://localhost:8080/api/productss`);
         setProducts(res.data);
         console.log(`Fetched ${res.data.length} products`);
       } catch (error) {
@@ -34,4 +34,4 @@ const Poem = () => {
   );
 };
 
-export default Poem;
+export default Products;

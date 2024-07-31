@@ -25,7 +25,6 @@ const Dashboard = () => {
     <div>
       <h2>Welcome, {user.username}!</h2>
       <p>Email: {user.email}</p>
-      {/* Add more user-specific content here */}
     </div>
   );
 };

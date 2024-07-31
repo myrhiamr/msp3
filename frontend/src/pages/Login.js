@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
@@ -14,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     console.log('Login attempt for:', email);
     try {
-      const res = await axios.post(`${process.env.REACT_APP_API_URL}/auth/login`, { email, password });
+      const res = await axios.post(`http://localhost:8080/api/auth/login`, { email, password });
       login(res.data);
       showFlashMessage('Login successful!', 'success');
       console.log('Login successful');
@@ -60,3 +59,4 @@ const Login = () => {
 };
 
 export default Login;
+
